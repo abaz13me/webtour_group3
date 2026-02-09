@@ -1,0 +1,357 @@
+:root {
+    --primary-bg: #FFFFFF;
+    --secondary-bg: #F8F9FA;
+    --text-main: #2D3436;
+    --text-muted: #636E72;
+    --brand-teal: #00A896;
+    --brand-orange: #F7931E;
+    --brand-purple: #662D91;
+    --card-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    --card-hover-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, .display-4, .display-6 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-main);
+}
+
+.brand-font {
+    font-family: 'Dancing Script', cursive;
+    color: var(--brand-teal);
+}
+
+/* Navbar */
+.navbar {
+    padding: 1.2rem 0;
+    transition: all 0.4s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white !important;
+}
+
+.navbar.scrolled .navbar-brand {
+    color: var(--text-main) !important;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.9) !important;
+    font-weight: 500;
+    margin-left: 2rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.navbar.scrolled .nav-link {
+    color: var(--text-main) !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--brand-orange) !important;
+}
+
+/* Hero Section (Index) */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('../img/hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    z-index: 2;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.wonderful-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    margin-bottom: -10px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, #00A896, #FFFFFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Fallback for text-fill-color support */
+@supports not (-webkit-background-clip: text) {
+    .wonderful-text {
+        background: none;
+        color: white;
+    }
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    margin-bottom: 2rem;
+}
+
+.btn-brand {
+    background-color: var(--brand-orange);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-weight: 600;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(247, 147, 30, 0.4);
+    transition: all 0.3s;
+}
+
+.btn-brand:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(247, 147, 30, 0.5);
+    background-color: #e68a1c;
+    color: white;
+}
+
+/* Hero Detail (Facility Pages) */
+.hero-detail {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('../img/hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5rem;
+    color: white;
+    position: relative;
+    margin-top: 76px; /* Offset for fixed navbar */
+}
+
+.hero-badge {
+    font-family: 'Dancing Script', cursive;
+    /* Background color defined inline or via utility classes usually, default to teal here if needed */
+    color: white;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Virtual Tour Section */
+#virtual-tour {
+    padding: 100px 0;
+    background-color: var(--primary-bg);
+}
+
+.section-header {
+    margin-bottom: 4rem;
+}
+
+.section-sub {
+    font-family: 'Dancing Script', cursive;
+    color: var(--brand-teal);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.tour-frame-wrapper {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    border: 8px solid white;
+}
+
+.tour-frame {
+    width: 100%;
+    height: 600px;
+    border: none;
+    display: block;
+}
+
+/* Destinations (Facilities) */
+.destinations-section {
+    background-color: var(--secondary-bg);
+    padding: 100px 0;
+}
+
+.destination-card {
+    background: white;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+}
+
+.destination-card:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+}
+
+.card-img-top {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.destination-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 2rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.destination-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.card-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.btn-link-brand {
+    color: var(--brand-teal);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.btn-link-brand:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--brand-teal);
+    transition: width 0.3s;
+}
+
+.btn-link-brand:hover:after {
+    width: 100%;
+}
+
+/* Content (Facility Pages) */
+.content-section {
+    padding: 80px 0;
+}
+
+.img-featured {
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.facility-list .list-group-item {
+    border: none;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid #eee;
+}
+
+.facility-list .list-group-item:last-child {
+    border-bottom: none;
+}
+
+.btn-back {
+    color: var(--brand-teal);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    transition: transform 0.3s;
+}
+
+.btn-back:hover {
+    transform: translateX(-5px);
+    color: var(--brand-teal);
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    color: var(--text-main);
+    padding: 60px 0 30px;
+    border-top: 1px solid #eee;
+}
+
+.footer-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: var(--brand-teal);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

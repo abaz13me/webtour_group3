@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wonderful Cirebon - Virtual Tour Alun-Alun Kejaksan</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Wonderful Cirebon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#virtual-tour">Jelajah 360°</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destinasi">Destinasi</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="hero-content">
+            <span class="wonderful-text">Wonderful</span>
+            <h1 class="hero-title">Cirebon</h1>
+            <p class="lead text-white mb-4 fs-4">The Gate of Secret, Alun-Alun Kejaksan</p>
+            <a href="#virtual-tour" class="btn btn-brand">Mulai Petualangan</a>
+        </div>
+    </header>
+
+    <!-- Virtual Tour Section -->
+    <section id="virtual-tour">
+        <div class="container">
+            <div class="text-center section-header">
+                <div class="section-sub">Experience</div>
+                <h2 class="display-4 fw-bold">Virtual Tour 360°</h2>
+                <p class="text-muted lead mt-3">Rasakan atmosfer magis dari jantung sejarah Kota Cirebon secara langsung.</p>
+            </div>
+            
+            <div class="tour-frame-wrapper">
+                <iframe 
+                    src="tour/index.htm" 
+                    class="tour-frame" 
+                    allowfullscreen="true" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="tour/index.htm" target="_blank" class="btn btn-outline-dark rounded-pill px-5 py-2">
+                    Mode Layar Penuh
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinasi" class="destinations-section">
+        <div class="container">
+            <div class="text-center section-header">
+                <div class="section-sub">Discover</div>
+                <h2 class="display-4 fw-bold">Destinasi Unggulan</h2>
+                <p class="text-muted lead mt-3">Jelajahi keunikan arsitektur dan budaya di sekitar alun-alun.</p>
+            </div>
+
+            <div class="row g-5">
+                <!-- Card 1: Masjid -->
+                <div class="col-md-4">
+                    <div class="destination-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/masjid.webp" class="card-img-top" alt="Masjid Raya At-Taqwa">
+                            <div class="card-overlay">
+                                <h5>Masjid Raya At-Taqwa</h5>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Masjid Raya At-Taqwa</h5>
+                            <p class="card-text">Landmark religius megah dengan arsitektur modern tropis yang menjadi pusat spiritual kota.</p>
+                            <a href="masjid.html" class="btn-link-brand">Jelajahi Lebih Lanjut</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Microlibrary -->
+                <div class="col-md-4">
+                    <div class="destination-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/micro_library.jpg" class="card-img-top" alt="Microlibrary">
+                            <div class="card-overlay">
+                                <h5>Microlibrary</h5>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Microlibrary</h5>
+                            <p class="card-text">Ruang baca estetik dengan desain kayu unik, menggabungkan literasi dan rekreasi.</p>
+                            <a href="microlibrary.html" class="btn-link-brand">Jelajahi Lebih Lanjut</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Gapura -->
+                <div class="col-md-4">
+                    <div class="destination-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/gapura.jpeg" class="card-img-top" alt="Gapura Candi Bentar">
+                            <div class="card-overlay">
+                                <h5>Gapura Candi Bentar</h5>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Gapura Candi Bentar</h5>
+                            <p class="card-text">Simbol gerbang keterbukaan dengan bata merah ekspos khas arsitektur Keraton Cirebon.</p>
+                            <a href="gapura.html" class="btn-link-brand">Jelajahi Lebih Lanjut</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-start text-center mb-3 mb-md-0">
+                    <div class="footer-brand">Wonderful Cirebon</div>
+                    <p class="text-muted mt-2">Menjelajah Keindahan Kota Udang.</p>
+                </div>
+                <div class="col-md-6 text-md-end text-center">
+                    <p class="mb-0 text-muted small">&copy; 2026 Virtual Tour Cirebon Klp 3. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
