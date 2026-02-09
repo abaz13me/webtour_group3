@@ -50,7 +50,11 @@ vt_kelompok3/
 ## Credits
 
 **Kelompok 3 - MM Advance**
--   [Your Name/Team Members]
+1.	ABDUL AZIZ (42230139 )
+2.	NOVAL ALFAREZA (42230152)
+3.	DELIZA SITI AISYAH (42230129)
+4.	SIFAUL QULUB (42230160) 
+5.	INDAH NUR HASANAH (42230115)
 
 ---
 *Wonderful Indonesia* style inspiration adapted for Wonderful Cirebon.
